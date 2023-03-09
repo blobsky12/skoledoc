@@ -1,1 +1,3 @@
-# blobsky12.github.io
+#                                SkoleDoc
+
+Dette er et skole prosjekt
