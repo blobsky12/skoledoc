@@ -4,16 +4,16 @@
 <title>Home - BasicDoc</title>
 <link rel="icon" href="./favicon.ico">
 <style>
- 
+
 .topnav a.navn {
   color: white;
   font-size: 25px;
 }
- 
+
 p {
  color: white;
 }
-  
+
 body {
   background-color: #404040;
   margin: 1;
@@ -45,6 +45,43 @@ body {
   color: white;
 }
 </style>
+
+<style>
+
+.sidenav {
+  height: 100%;
+  width: 225px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 64px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #BBBABB;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: white;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+</style>
+
+
+
 </head>
 <body>
   <style>
@@ -60,8 +97,8 @@ body {
    font-size: 10;
 }
 </style>
- 
- 
+
+
 <div class="topnav">
   <a class="navn" >BasicDoc</a>
   <a class="active" href="./">Home</a>
@@ -69,6 +106,15 @@ body {
   <a href="./example.html">Download(ex)</a>
   <a href="./about.html">About</a>
 </div>
+
+
+<div class="sidenav">
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
   <br>
 <p>The content of the document..<p>
 <img src="./pictures/github-logo.png" width="5" height="3">
