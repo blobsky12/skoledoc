@@ -6,7 +6,7 @@
 <style>
 
 .topnav a.navn {
-  color: white;
+  color: black;
   font-size: 25px;
 }
 
@@ -50,7 +50,7 @@ body {
 
 .sidenav {
   height: 100%;
-  width: 225px;
+  width: 150px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -82,6 +82,12 @@ img {
 }
   
 a2{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+  
+p{
   text-align: center;
 }
   
@@ -106,17 +112,7 @@ a2{
    font-size: 10;
 }
 </style>
-
-
-<div class="topnav">
-  <a class="navn" >BasicDoc</a>
-  <a class="active" href="./">Home</a>
-  <a href="./documentation.html">Documentation</a>
-  <a href="./example.html">Download(ex)</a>
-  <a href="./about.html">About</a>
-</div>
-
-
+  
 <div class="sidenav">
   <a href="#">About</a>
   <a href="#">Services</a>
@@ -124,11 +120,21 @@ a2{
   <a href="#">Contact</a>
 </div>
 
+
+<div class="topnav">
+  <a class="navn" >BasicDoc</a>
+  <a class="active" href="./index.html">Home</a>
+  <a href="./documentation.html">Documentation</a>
+  <a href="./example.html">Download(ex)</a>
+  <a href="./about.html">About</a>
+</div>
+
+
   <br>
 <p>The content of the document..<p>
  <div class="footer">
-   <a2>Made by: Blobsky and JuniorTheMeme</a2>
-   <img src="./pictures/github-logo-white.png" width="43" height="43"  href="https://github.com/blobsky12/skoledoc">
+   <a2>Made by: Blobsky</a2>
+   <a href="https://github.com/blobsky12/skoledoc"><img src="./pictures/github-logo-white.png" style="width:43px;height:43px;"></a>
  </div>
 </body>
 
