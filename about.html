@@ -45,21 +45,42 @@ body {
   color: white;
 }
 
-  
+
 img {
   float:right
 }
-  
+
 a2{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-  
-p{
-  text-align: center;
+
+.info{
+  text-align: left;
+  margin-left: 230px;
+  width: 640px;
+
 }
-  
+
+.buton {
+  border-radius: 10px;
+  position: relative;
+  background: #747474;
+  height: 350px;
+  width: 400px;
+  margin-left: 900px;
+  position: absolute;
+}
+
+.boxinfo{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.viktiginfo {
+  color: black;
+}
 
 
 </style>
@@ -82,8 +103,6 @@ p{
 }
 </style>
 
-  
-
 <div class="topnav">
   <a class="navn" >BasicDoc</a>
   <a href="./index.html">Home</a>
@@ -92,9 +111,19 @@ p{
   <a class="active" href="./about.html">About</a>
 </div>
 
-
+<div class="buton">
+  <h class="boxinfo"> Mest paraktisk info</h>
+  <p class="boxinfo">Her kan man putte an oppsumering/mest parktiske infoen som man trenger og vite.</p>
   <br>
-<p>The content of the document..<p>
+  <p class="boxinfo viktiginfo">Eier: Deg </p>
+  <p class="boxinfo viktiginfo">Drift: 2019-2023 </p>
+  <p class="boxinfo viktiginfo">Kost: gratis </p>
+</div>
+
+<div class="info">
+  <p>Her kan man putte alt av informasjon etter øsnke.<p>
+</div>
+
  <div class="footer">
    <a2>Made by: Blobsky</a2>
    <a href="https://github.com/blobsky12/skoledoc"><img src="./pictures/github-logo-white.png" style="width:43px;height:43px;"></a>
