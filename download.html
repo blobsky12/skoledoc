@@ -3,7 +3,49 @@
 <head>
 <title>Download - BasicDoc</title>
 <link rel="icon" href="./pictures/favicon.ico">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
+
+.buton {
+  border-radius: 10px;
+  background: #2563EB;
+  height: 50px;
+  width: 200px;
+}
+
+
+.buton2 {
+  border-radius: 10px;
+  background: #2563EB;
+  height: 50px;
+  width: 200px;
+  position: relative;
+  float: right;
+
+}
+
+.version {
+  border-radius: 10px;
+  border-color: red;
+  position: relative;
+  height: 55px;
+  width: 730px;
+  border-style: solid;
+  border-width: 2px;
+  margin-left: 330px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  padding-left: 3px;
+  margin-top: 10px;
+}
+
+
+.p2 {
+  text-align: center;
+  margin-left: 20px;
+}
 
 .topnav a.navn {
   color: black;
@@ -12,6 +54,7 @@
 
 p {
  color: white;
+ position: relative;
 }
 
 body {
@@ -21,7 +64,7 @@ body {
  /* Add a black background color to the top navigation */
 .topnav {
   overflow: hidden;
-   height: 90px;
+  height: 90px;
 }
 
 /* Style the links inside the navigation bar */
@@ -45,33 +88,41 @@ body {
   color: white;
 }
 
- 
-  
-  
-img {
+.text{
+  text-align: left;
+  margin-left: 330px;
+
+}
+
+.img2 {
   float:right
 }
-  
-a2{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+
+
+h1{
+  color: White;
+  font-size: 30px;
 }
-  
-p{
+
+.versjoner{
   text-align: center;
 }
-  
+
+a{
+  position: relative;
+  color: white;
+}
+
 
 
 </style>
-
 
 
 </head>
 <body>
   <style>
 .footer {
+   overflow: hidden;
    position: fixed;
    left: 0;
    right: 10;
@@ -84,7 +135,6 @@ p{
 }
 </style>
 
-
 <div class="topnav">
   <a class="navn" >BasicDoc</a>
   <a href="./index.html">Home</a>
@@ -93,12 +143,29 @@ p{
   <a href="./about.html">About</a>
 </div>
 
-
+<div class="text">
+  <h1>Last ned Eksempen 1</h1>
   <br>
-<p>The content of the document..<p>
+  <p>Dette er et eksempel som skal vise hvordan alt vil se ut<p>
+    <div class="buton">
+      <button class="buton"><i class="fa fa-download"></i> Download</button>
+    </div>
+ </div>
+  <p class="versjoner">Eldere Versjoner<p>
+    <div class="version">
+      <a> Dette er versjonen 1.1 (ustabil)</a>
+      <button class="buton2"><i class="fa fa-download"></i> Download</button>
+    </div>
+    <div class="version">
+      <a>Dette er versjonen 0.9 (gammen ikke ambefalt)</a>
+      <button class="buton2"><i class="fa fa-download"></i> Download</button>
+    </div>
+
+
+
  <div class="footer">
    <a2>Made by: Blobsky</a2>
-   <a href="https://github.com/blobsky12/skoledoc"><img src="./pictures/github-logo-white.png" style="width:43px;height:43px;"></a>
+   <a href="https://github.com/blobsky12/skoledoc"><img class="img2"src="./pictures/github-logo-white.png" style="width:43px;height:43px;"></a>
  </div>
 </body>
 
