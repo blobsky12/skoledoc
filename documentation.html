@@ -100,6 +100,14 @@ a2{
   margin-left: 400px;
 
 }
+
+.text iframe{
+  position: absolute;
+  top: 10;
+  width: auto;
+  height: 100%;
+  bottom: 20;
+}
 h1{
   color: White;
   font-size: 30px;
@@ -127,7 +135,7 @@ h1{
 </style>
 
 <div class="sidenav">
-  <a href="#">page1</a>
+  <a href="#" onclick="loadHtml("text", "page1.html")">page1</a>
   <a href="#">Services</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a>
@@ -144,10 +152,8 @@ h1{
 
 
 <div class="text">
-  <iframe src="./pages/Readme.md" width="100%" height="300"></iframe>
-  <h1>Dette er BasicDoc Doumentetion</h1>
+  <iframe src="./pages/page1.html" width="100%" height="10" frameborder='0' scrolling='no'></iframe>
   <br>
-  <p>Her er alle dokumenterte ting.<p>
 
 </div>
 
@@ -159,4 +165,3 @@ h1{
 </body>
 
 </html>
-
