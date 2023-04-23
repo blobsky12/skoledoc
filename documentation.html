@@ -30,7 +30,6 @@ body {
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: ;
   color: #BBBABB;
   text-align: center;
   padding: 14px 16px;
@@ -56,7 +55,6 @@ body {
   height: 100%;
   width: 150px;
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
   overflow-x: hidden;
@@ -103,11 +101,12 @@ a2{
 
 .text iframe{
   position: absolute;
-  top: 10;
-  width: auto;
+  margin-top: 20px;
+  width: 900px;
   height: 100%;
   bottom: 20;
 }
+
 h1{
   color: White;
   font-size: 30px;
@@ -135,10 +134,10 @@ h1{
 </style>
 
 <div class="sidenav">
-  <a href="#" onclick="loadHtml("text", "page1.html")">page1</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <a href="#" onclick="loadIframe()">Hvordan lage sider</a>
+  <a href="#" onclick="loadIframe2()">Bilde tutorial</a>
+  <a href="#" onclick="loadIframe3()">Clients</a>
+  <a href="#" onclick="loadIframe4()">Eksempel</a>
 </div>
 
 
@@ -152,9 +151,10 @@ h1{
 
 
 <div class="text">
-  <iframe src="./pages/page1.html" width="100%" height="10" frameborder='0' scrolling='no'></iframe>
-  <br>
-
+  <iframe id="myIframe" frameborder='0' scrolling='no'></iframe>
+  <iframe id="myIframe2" frameborder='0' scrolling='no'></iframe>
+  <iframe id="myIframe3" frameborder='0' scrolling='no'></iframe>
+  <iframe id="myIframe4" frameborder='0' scrolling='no'></iframe>
 </div>
 
 
@@ -165,3 +165,59 @@ h1{
 </body>
 
 </html>
+
+<script>
+function loadIframe() {
+    document.getElementById("myIframe").src = "./pages/page2.html";
+    document.getElementById("myIframe").style.display = "block";
+
+    document.getElementById("myIframe2").style.display = "none";
+    document.getElementById("myIframe3").style.display = "none";
+    document.getElementById("myIframe4").style.display = "none";
+}
+function loadIframe2() {
+    document.getElementById("myIframe2").src = "./pages/page4.html";
+    document.getElementById("myIframe2").style.display = "block";
+
+    document.getElementById("myIframe").style.display = "none";
+    document.getElementById("myIframe3").style.display = "none";
+    document.getElementById("myIframe4").style.display = "none";
+}
+function loadIframe3() {
+    document.getElementById("myIframe3").src = "./pages/page3.html";
+    document.getElementById("myIframe3").style.display = "block";
+
+    document.getElementById("myIframe").style.display = "none";
+    document.getElementById("myIframe2").style.display = "none";
+    document.getElementById("myIframe4").style.display = "none";
+}
+function loadIframe4() {
+    document.getElementById("myIframe4").src = "./pages/page1.html";
+    document.getElementById("myIframe4").style.display = "block";
+
+    document.getElementById("myIframe").style.display = "none";
+    document.getElementById("myIframe2").style.display = "none";
+    document.getElementById("myIframe3").style.display = "none";
+}
+
+
+const iframe = document.getElementById('myIframe');
+iframe.addEventListener('load', () => {
+  const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+  const headers = iframeDoc.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  const sideNav = document.createElement('div');
+  sideNav.style.position = 'fixed';
+  sideNav.style.right = '0';
+  sideNav.style.top = '0';
+  for (const header of headers) {
+    const link = document.createElement('a');
+    link.href = '#' + header.id;
+    link.textContent = header.textContent;
+    link.style.display = 'block';
+    sideNav.appendChild(link);
+  }
+  document.body.appendChild(sideNav);
+});
+
+
+</script>
